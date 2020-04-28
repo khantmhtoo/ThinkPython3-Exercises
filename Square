@@ -1,0 +1,9 @@
+>>> import turtle as t
+>>> myt = t.Turtle()
+>>> myt.forward(250)
+>>> myt.left(90)
+>>> myt.forward(250)
+>>> myt.left(90)
+>>> myt.forward(250)
+>>> myt.left(90)
+>>> myt.forward(250)
