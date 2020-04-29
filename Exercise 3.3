@@ -1,0 +1,67 @@
+###
+Write a function that draws a grid like the following:
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+###
+
+def do_twice(n):
+  n()
+  n()
+
+def do_four(n):
+  do_twice(n)
+  do_twice(n)
+
+def printhead():
+  print('+ - - - - + - - - - +')
+
+def printspace():
+  print('|         |         |')
+
+def thebox():
+  printhead()
+  do_four(printspace)
+
+def finishbox():
+  do_twice(thebox)
+  printhead()
+
+finishbox()
+
+-----------------------------------
+def do_twice(n):
+  n()
+  n()
+
+def do_four(n):
+  do_twice(n)
+  do_twice(n)
+
+def do_eight(n):
+  do_four(n)
+  do_four(n)
+
+def printhead():
+  print('+ - - - - + - - - - ' * 2 + '+')
+
+def printspace():
+  print('|         |         ' * 2 + '|')
+
+def thebox():
+  printhead()
+  do_four(printspace)
+
+def finishbox():
+  do_four(thebox)
+  printhead()
+
+finishbox()
