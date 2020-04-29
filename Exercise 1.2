@@ -1,0 +1,19 @@
+min = 42
+sec = 60
+totsec = (min * sec) + 42
+print("The total sec in 42 min 42 is", totsec, "sec.")
+
+kilo = 10
+miles = 1.61
+totmile = kilo/miles
+print("The total miles in 10 kilometer is", totmile, "miles.")
+
+totmin = totsec/60
+tothour = totmin/60
+
+in_sec = totsec/totmile
+print("This the avg time of", in_sec, "in miles per sec.")
+in_min = totmin/totmile
+print("This the avg time of", in_min, "in miles per min.")
+in_hour = tothour/totmile
+print("This the avg time of", in_hour, "in miles per hour.")
