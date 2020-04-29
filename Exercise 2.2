@@ -1,0 +1,31 @@
+###
+1. The volume of a sphere with radius r is (4/3)πr^3. What is the volume of a sphere with radius 5?
+2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs
+$3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for
+60 copies?
+3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
+tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+###
+
+import math as m
+
+r = 5
+vol_equ = (4/3)* m.pi * (r**3)
+print("The vol equals:", vol_equ, "vol")
+
+bcost = 24.95
+discount = .4
+fship = 3
+restship = 3.75
+totb = 60
+cost = ((bcost * discount) * totb) + fship + restship * (totb-1)
+print("The total cost of the wholesale is", cost, "dollars")
+
+insec = 6.52 * 3600
+slow = 8.15 * 60
+fast = 7.12 * 60
+totslow = slow * 2
+totfast = fast * 3
+timeback = insec + totslow + totfast
+timeback_inhour = timeback/3600
+print("Got back home at", timeback_inhour, ("am."))
