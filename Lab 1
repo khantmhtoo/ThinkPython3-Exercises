@@ -1,0 +1,39 @@
+###
+Your task in this Exercise is to flesh out the gradePrint function, so that it will work for the full
+range of grades given here: A+ Over 100%; A 100 – 93%; A- 92 – 90%; B+ 89 – 88%; B 87 – 83%; B82 – 80%; 
+C+ 79 – 78%; C 76 – 72%; C- 71 – 69%; D+ 68 – 66%; D 65 – 62%; D- 61 – 59%; F <58%
+Creating a grader in short.
+###
+
+grades = float(input("Grade: "))
+grade = round(grades)
+
+def grader(percentage):
+  if (grade >= 100):
+    print("You got %.1f%% an A+." % percentage)
+  elif (grade < 100 and grade >= 93):
+    print("You got %.1f%% an A." % percentage)
+  elif (grade <= 92 and grade >= 90):
+    print("You got %.1f%% an A-." % percentage)
+  elif (grade <= 89 and grade >= 88):
+    print("You got %.1f%% an B+." % percentage)
+  elif (grade <= 87 and grade >= 83):
+    print("You got %.1f%% an B." % percentage)
+  elif (grade <= 82 and grade >= 80):
+    print("You got %.1f%% an B-." % percentage)
+  elif (grade <= 72 and grade >= 78):
+    print("You got %.1f%% an C+." % percentage)
+  elif (grade <= 77 and grade >= 72):
+    print("You got %.1f%% an C." % percentage)
+  elif (grade <= 71 and grade >= 69):
+    print("You got %.1f%% an C-." % percentage)
+  elif (grade <= 68 and grade >= 66):
+    print("You got %.1f%% an D+." % percentage)
+  elif (grade <= 65 and grade >= 62):
+    print("You got %.1f%% an C-." % percentage)
+  elif (grade <= 61 and grade >= 59):
+    print("You got %.1f%% an D+." % percentage)
+  else:
+    print("You got %.1f%% an F " % percentage)
+
+grader(grade)
