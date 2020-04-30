@@ -1,8 +1,13 @@
 ###
-Your task in this Exercise is to flesh out the gradePrint function, so that it will work for the full
+1. Your task in this Exercise is to flesh out the gradePrint function, so that it will work for the full
 range of grades given here: A+ Over 100%; A 100 – 93%; A- 92 – 90%; B+ 89 – 88%; B 87 – 83%; B82 – 80%; 
 C+ 79 – 78%; C 76 – 72%; C- 71 – 69%; D+ 68 – 66%; D 65 – 62%; D- 61 – 59%; F <58%
 Creating a grader in short.
+2. Write a script that reads the current time and converts it to a time of day in hours,
+minutes, and seconds, plus the number of days since the epoch.
+-- If before noon, the line should read: "Good morning!"
+-- If after noon, but before 6 pm, the line should read: "Good afternoon!
+-- If after 6 pm and before midnight, the line should read: Good evening
 ###
 
 grades = float(input("Grade: "))
@@ -37,3 +42,5 @@ def grader(percentage):
     print("You got %.1f%% an F " % percentage)
 
 grader(grade)
+--------------------------------------------------------
+
