@@ -4,10 +4,7 @@ range of grades given here: A+ Over 100%; A 100 – 93%; A- 92 – 90%; B+ 89 �
 C+ 79 – 78%; C 76 – 72%; C- 71 – 69%; D+ 68 – 66%; D 65 – 62%; D- 61 – 59%; F <58%
 Creating a grader in short.
 2. Write a script that reads the current time and converts it to a time of day in hours,
-minutes, and seconds, plus the number of days since the epoch.
--- If before noon, the line should read: "Good morning!"
--- If after noon, but before 6 pm, the line should read: "Good afternoon!
--- If after 6 pm and before midnight, the line should read: Good evening
+minutes, and seconds
 ###
 
 grades = float(input("Grade: "))
@@ -43,4 +40,28 @@ def grader(percentage):
 
 grader(grade)
 --------------------------------------------------------
+import time as t
 
+clock = t.time() #time in sec
+clockm = clock/60 #time in min
+clockh = (clockm/60)-19 #time in hour --> -12 sets the time to 0
+clock_s = clock % 60 #time left in sec
+clock_m = clockm % 60 #time left in min
+clock_h = clockh % 60 #time left in hour
+clock_hr = clock_h // 1 #time keeping from rounding
+current_t = "{0:.0f}h:{1:.0f}m:{2:.0f}s".format(clock_hr,clock_m,clock_s)
+
+if clock_h > 3 and clock_h <= 10:
+  print("It's morning", current_t, "am.")
+elif clock_h >= 11 and clock_h <= 15:
+  if clock_h >= 11 and clock_h <= 11.99:
+    print("It's afternoon", current_t, "am")
+  else:
+    print("It's afternoon", current_t, "pm")
+elif clock_h >= 16 and clock_h <= 21:
+  print("It's evening", current_t, "pm")
+else:
+  if clock_h >= 21 and clock_h <= 23.99:
+    print("It's night", current_t, "pm")
+  else:
+    print("It's night", current_t, "am")
