@@ -1,0 +1,37 @@
+###
+Part 1, 2 is revised.
+3-5 still needed.
+Exercise 4.3
+###
+
+import turtle as t
+import random as r
+
+name = input("Turtle's name: ")
+print("So, your turtle is called {0}.".format(name))
+name = t.Turtle()
+
+while True:
+    try:
+        length = int(input("Enter the length for the turtle to move: "))
+        break
+    except ValueError:
+        print("Sorry please enter a value: ")
+    
+def square(t):
+    for i in range(4):
+        t.fd(100)
+        t.lt(90)
+
+def squarel(t,l):
+    print("Your turtle moved length: {0}".format(l))
+    while True:
+        try:
+            times = int(input("Enter the times you want to move: "))
+            break
+        except ValueError:
+            print("Sorry please enter a value: ")
+    print("Times moved:", times)
+    for i in range(times):
+        t.fd(l)
+        t.lt(l)
