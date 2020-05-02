@@ -34,4 +34,4 @@ def squarel(t,l):
     print("Times moved:", times)
     for i in range(times):
         t.fd(l)
-        t.lt(l)
+        t.lt(90)
