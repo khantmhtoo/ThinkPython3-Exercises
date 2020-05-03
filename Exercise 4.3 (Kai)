@@ -17,6 +17,13 @@ while True:
         break
     except ValueError:
         print("Sorry please enter a value: ")
+
+while True:
+    try:
+        angle_n = int(input("Enter the angle for the turtle to move: "))
+        break
+    except ValueError:
+        print("Sorry please enter a value: ")
     
 def square(t):
     for i in range(4):
@@ -35,3 +42,12 @@ def squarel(t,l):
     for i in range(times):
         t.fd(l)
         t.lt(90)
+
+def circle(t,l,n):
+    angle = 360/n
+    for i in range(n):
+        t.fd(l)
+        t.lt(angle)
+
+circle(name, length, angle_n)
+    
