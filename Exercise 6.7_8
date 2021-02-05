@@ -1,0 +1,35 @@
+#6.7
+def is_power(a, b):
+    if a % b == 0:
+        return True
+        if a/b == 0:
+            return True
+        else:
+            return is_power(a/b, b)
+    else:
+        return False
+
+def prompt_o():
+    a = int(input("Enter value for a: "))
+    b = int(input("Enter value for b: "))
+    return is_power(a, b)
+
+#print(prompt_o())
+
+#6.8
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        r = a % b #reminder
+        if r == 0:
+            return b
+        else:
+            return gcd(b, r)
+
+def prompt_b():
+    a = int(input("Enter value for a: "))
+    b = int(input("Enter value for b: "))
+    return gcd(a,b)
+
+print(prompt_b())
