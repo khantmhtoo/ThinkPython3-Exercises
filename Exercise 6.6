@@ -1,0 +1,33 @@
+def first(word):
+    if word == "":
+        pass
+    else:
+        return word[0]
+
+def last(word):
+    if word == "":
+        pass
+    else:
+        return word[-1]
+
+def middle(word):
+    if word == "":
+        pass
+    else:
+        return word[1:-1]
+
+def is_palindrome(string):
+    if string == "":
+        print("Nothing was enter")
+    elif string != '':
+        new_string = last(string) + middle(string) + first(string)
+        if new_string == string:
+            return True
+        else:
+            return False
+    
+def prompt():
+    word = input("Enter a word: ")
+    return is_palindrome(word)
+
+print(prompt())
